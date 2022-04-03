@@ -35,8 +35,21 @@ async function fetchAndDisplayFamilies() {
 
         familiesEl.append(wholeFamilyEl);
 
+        for (let bunny of family.fuzzy_bunnies) {
+            const bunnyEl = document.createElement('p');
+            bunnyEl.textContent = bunny.name;
+            bunniesEl.append(bunnyEl);
+            wholeFamilyEl.append(bunniesEl, familyNameEl);
+            familiesEl.append(wholeFamilyEl);
+        }
+
     }
+   
 }
+       
+    
+
+
 
         // for (let bunny of family.fuzzy_bunnies) {
         //     const carl = family.fuzzy_bunnies;
