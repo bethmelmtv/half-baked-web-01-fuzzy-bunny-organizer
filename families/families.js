@@ -28,7 +28,7 @@ async function fetchAndDisplayFamilies() {
         const familyNameEl = document.createElement('h3');
         const bunniesEl = document.createElement('div');
     
-        wholeFamilyEl.classList.add('a-family');
+        wholeFamilyEl.classList.add('family');
         familyNameEl.textContent = family.name;
         
         wholeFamilyEl.append(familyNameEl, bunniesEl);
