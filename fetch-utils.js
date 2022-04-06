@@ -27,15 +27,18 @@ export async function deleteBunny(id) {
     return checkError(response);
 }
 
-export async function createBunny(bunny, id) {
+export async function createBunny(bunny_name, id) {
     // create a bunny using the bunny argument
     const response = await client
         .from('fuzzy_bunnies')
         .insert({
-            name: bunny.name,
-            family_id: id
+            name: bunny_name,
+            family_id: id,
         });
-
+    console.log(bunny_name);
+    console.log(id);
+    // const carl = createBunny('carl', 4);
+    // console.log(carl);
     return checkError(response);
 }
 
